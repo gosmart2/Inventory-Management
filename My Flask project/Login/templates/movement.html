@@ -1,0 +1,139 @@
+<style>
+body {
+	background:black;
+}
+h2
+{
+	margin-top:20px;
+    margin-left:530px;
+	color:#FFbb00;
+}
+.img
+{
+	transform:translate(5%,5%);
+}
+h3
+{
+
+	color:#FFbb00;
+	position:absolute;
+	 top:220px;
+	 left:70px;
+}
+.tab1
+{
+	color:white;
+	 position:absolute;
+	 top:200px;
+	 left:490px;
+}
+td,tr,th
+{
+	color:white;
+}
+.tab2
+{
+	color:white;
+	 position:absolute;
+	 top:360px;
+	 left:380px;
+}
+.sub1
+{
+	border:none;
+	outline:none;
+	width:130px;
+	height:30px;
+	color:#fff;
+	font-size:16px;
+	background:#3f32b1;
+	cursor:pointer;
+	border-radius:5px;
+}
+.sub1:hover
+{
+background:#FFbb00;
+color:black;
+}
+.val1 a:link,a:visited
+{
+	background-color:#0486f5;
+	color:black;
+	padding:10px 20px 12px 20px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	width:80px;
+	height:20px;
+	border:1px solid black;
+	font-weight:bold;
+	position:absolute;
+	top:220px;
+	right:80px;
+}
+.val1 a:hover,a:active
+{
+	background-color:#1658a7;
+	color:white;
+}
+</style>
+<html>
+<body>
+<h2>Inventory management</h2>
+<div class="val1"><a href="/pro">BACK</a></div>
+<form action="moveproduct" method="post">
+<table align="center" cellpadding="10" cellspacing="10" class="tab1">
+<tr>
+<td>PRODUCT ID:</td>
+    <input type="hidden" name="pid" value="{% for product in products %} {{ product[0] }} {% endfor %}">
+<td>{% for product in products %} {{ product[0] }} {% endfor %}</td>
+</tr>
+
+<tr>
+<td>PRODUCT NAME:</td>
+<td>{% for product in products %} {{ product[1] }} {% endfor %}</td>
+</tr>
+
+<tr>
+<td>FROM LOCATION:</td>
+<td><select name="from">
+<option value="">--select--</option>
+{% for location in locations %}
+    <option value="{{ location[1] }} ">{{ location[1] }} </option>
+    {% endfor %}
+</select>
+</td>
+</tr>
+
+<tr>
+<td>TO LOCATION:</td>
+<td><select name="to">
+<option value="">--select--</option>
+{% for location in locations %}
+    <option value="{{ location[1] }} ">{{ location[1] }} </option>
+    {% endfor %}
+</select>
+</td>
+</tr>
+
+<tr>
+<td>QUANTITY:</td>
+<td><input type="text" name="qty" placeholder="Quantity"></td>
+</tr>
+
+<tr>
+<td>DATE:</td>
+<td><input type="text" name="date" placeholder="Date"></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" name="v2" value="Moved" class="sub1">
+    <input type="submit" name="v2" value="View" class="sub1">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+

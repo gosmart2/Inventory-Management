@@ -1,0 +1,108 @@
+<style>
+body {
+	background:black;
+}
+h2
+{
+	margin-top:20px;
+    margin-left:530px;
+	color:#FFbb00;
+}
+.img
+{
+	transform:translate(5%,5%);
+}
+h3
+{
+
+	color:#FFbb00;
+	position:absolute;
+	 top:220px;
+	 left:70px;
+}
+.tab1
+{
+	color:white;
+	 position:absolute;
+	 top:250px;
+	 left:490px;
+}
+td,tr,th
+{
+	color:white;
+}
+.tab2
+{
+	color:white;
+	 position:absolute;
+	 top:360px;
+	 left:380px;
+}
+.sub1
+{
+	border:none;
+	outline:none;
+	width:130px;
+	height:30px;
+	color:#fff;
+	font-size:16px;
+	background:#3f32b1;
+	cursor:pointer;
+	border-radius:5px;
+}
+.sub1:hover
+{
+background:#FFbb00;
+color:black;
+}
+.val1 a:link,a:visited
+{
+	background-color:#0486f5;
+	color:black;
+	padding:10px 20px 12px 20px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	width:80px;
+	height:20px;
+	border:1px solid black;
+	font-weight:bold;
+	position:absolute;
+	top:220px;
+	right:80px;
+}
+.val1 a:hover,a:active
+{
+	background-color:#1658a7;
+	color:white;
+}
+</style>
+<html>
+<body>
+<h2>Inventory management</h2>
+<div class="val1"><a href="/back">BACK</a></div>
+<form action="locmanage" method="post">
+<table align="center" cellpadding="10" cellspacing="10" class="tab1">
+<tr>
+<td>LOCATION ID:</td>
+<td><input type="text" name="locid" placeholder="Location id"></td>
+</tr>
+
+<tr>
+<td>LOCATION NAME:</td>
+<td><input type="text" name="locname" placeholder="Location name"></td>
+</tr>
+</table>
+<table align="center" cellpadding="10" cellspacing="10" class="tab2">
+<tr>
+<td colspan="2" align="center">
+<input type="submit" name="v1" value="Add location" class="sub1">
+<input type="submit" name="v1" value="Delete location" class="sub1">
+<input type="submit" name="v1" value="Update location" class="sub1">
+<input type="submit" name="v1" value="View location" class="sub1">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

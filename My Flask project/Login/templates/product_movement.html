@@ -1,0 +1,97 @@
+<style>
+body {
+	background:black;
+}
+h2
+{
+	margin-top:20px;
+    margin-left:530px;
+	color:#FFbb00;
+}
+.img
+{
+	transform:translate(5%,5%);
+}
+h3
+{
+
+	color:#FFbb00;
+	position:absolute;
+	 top:80px;
+	 left:550px;
+}
+.tab1
+{
+	color:white;
+	 position:absolute;
+	 top:200px;
+	 left:480px;
+}
+td,tr,th
+{
+	color:white;
+}
+.sub1
+{
+	border:none;
+	outline:none;
+	width:80px;
+	height:30px;
+	color:#fff;
+	font-size:16px;
+	background:#3f32b1;
+	cursor:pointer;
+	border-radius:5px;
+}
+.sub1:hover
+{
+background:#FFbb00;
+color:black;
+}
+.val1 a:link,a:visited
+{
+	background-color:#0486f5;
+	color:black;
+	padding:10px 20px 12px 20px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	width:80px;
+	height:20px;
+	border:1px solid black;
+	font-weight:bold;
+	position:absolute;
+	top:220px;
+	right:80px;
+}
+.val1 a:hover,a:active
+{
+	background-color:#1658a7;
+	color:white;
+}
+
+</style>
+		<h2>Inventory management</h2>
+		<h3>Product Movement</h3>
+		<div class="val1"><a href="/pro">BACK</a></div>
+		<table align="center" border="1px" style="line-height:40px;" class="tab1">
+		<tr>
+		<th>Product id</th>
+		<th>From Location</th>
+            <th>To Location</th>
+            <th>Quantity</th>
+            <th>Date</th>
+		</tr>
+{% for movement in movements %}
+<tr>
+<td>{{ movement[4] }}</td>
+<td>{{ movement[2] }}</td>
+    <td>{{ movement[3] }}</td>
+    <td>{{ movement[5] }}</td>
+    <td>{{ movement[1] }}</td>
+</tr>
+			{% endfor %}
+        </table>
+</form>
+</body>
+</html>
